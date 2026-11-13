@@ -1,1 +1,3 @@
 /bin/
+/target/
+!cms_inventory.csv
