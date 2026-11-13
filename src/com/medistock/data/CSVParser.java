@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CSVParser {
+public class CSVParser{
 	
 	/**
 	 * Reads the entire contents of the CSV file using openCSV.
