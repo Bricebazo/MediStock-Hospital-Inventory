@@ -21,6 +21,12 @@ public class Supplier {
 		return supplierId;
 	}
 
+	@Override
+	public String toString() {
+		return "Supplier [supplierId=" + supplierId + ", name=" + name + ", ContactPerson=" + ContactPerson
+				+ ", phoneNumber=" + phoneNumber + "]";
+	}
+
 	public void setSupplierId(String supplierId) {
 		this.supplierId = supplierId;
 	}
