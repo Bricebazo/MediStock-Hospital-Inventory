@@ -8,7 +8,7 @@
 
 ## 🛠️ Technical Stack
 - **Language:** Java 17+
-- **Build & Dependency Management:** Apache Maven
+- **Build & Dependency Management:** Apache Maven (with bundled Maven Wrapper)
 - **Database & Persistence:** SQLite & JDBC
 - **Libraries:** OpenCSV, SLF4J, JUnit 5
 - **Data Visualization:** Tableau Public
@@ -29,7 +29,7 @@
 - [x] **Observer Pattern:** Built a decoupled notification system (`StockNotifier`) with Email and SMS alert observers.
 - [x] **Automated Alerts:** Integrated low-stock triggers that broadcast alerts across registered observers.
 - [x] **CMS Reimbursement Logic:** Implemented calculations for **Medicare Part B (ASP + 6%)** and **340B Drug Pricing**.
-- [x] **Database & HIPAA Audit Logging:** Added SQLite persistence via `InventoryDAO` and encrypted/sanitized access tracking via `SecurityLogger`.
+- [x] **Database & HIPAA Audit Logging:** Added SQLite persistence via `InventoryDAO` and sanitized access tracking via `SecurityLogger`.
 - [x] **Unit Testing:** Verified financial calculations and alert thresholds using **JUnit 5**.
 
 ## 📊 Data Visualization & Analytics
@@ -47,10 +47,9 @@ MediStock exports processed inventory and financial risk metrics for executive o
 
 ### Prerequisites
 - **Java Development Kit (JDK):** Version 17 or higher
-- **Apache Maven:** Version 3.8+ (for terminal execution)
-- **Git**
+- **Git** *(Maven is bundled via Maven Wrapper—no separate Maven installation required)*
 
-### Option 1: Run via Command Line / Terminal
+### Option 1: Run via Command Line / Terminal (Recommended)
 
 1. **Clone the repository:**
    ```bash
