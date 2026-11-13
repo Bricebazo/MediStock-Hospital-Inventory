@@ -3,39 +3,56 @@
 **MediStock** is a Java-based inventory management system designed for healthcare providers. It integrates real-world CMS (Medicare/Medicaid) data to track medication stock levels, expiration dates, and reimbursement logic.
 
 ## 🚀 Project Impact
-- **Keyword Hits:** Java, OOP, SQL, HIPAA Compliance, Medicare/Medicaid Reimbursement.
-- **Goal:** Provide a HIPAA-compliant dashboard for pharmacy informatics and supply chain analysts.
-
-## 📅 Progress Tracker
-
-### Week 1: Foundation & Data Ingestion (COMPLETED)
-- [x] **Core OOP Architecture:** Implemented `InventoryItem` parent class with `Medication` and `MedicalDevice` inheritance.
-- [x] **Maven Integration:** Configured project dependencies using Maven.
-- [x] **Data Parsing:** Integrated **OpenCSV** to handle large-scale CMS Medicare Part D datasets.
-- [x] **Data Mapping:** Built a robust `DataMapper` to clean raw CSV strings and convert them into Java Objects.
-- [x] **Inventory Manager:** Developed a `HashMap` based management system for $O(1)$ lookup performance.
-- [x] **Console UI:** Built a functional command-line interface for data loading and reporting.
+- **Core Competencies:** Java, Object-Oriented Programming (OOP), SQLite/JDBC, HIPAA-Compliant Audit Logging, Medicare/Medicaid Reimbursement Modeling.
+- **Objective:** Provide a HIPAA-compliant inventory and financial analytics engine for pharmacy informatics and healthcare supply chain analysts.
 
 ## 🛠️ Technical Stack
 - **Language:** Java 17+
-- **Build Tool:** Maven
-- **Libraries:** OpenCSV
-- **Data Source:** CMS.gov Medicare Part D Prescriber Data
-### Week 2: Intelligent Monitoring & Financial Logic (COMPLETED)
-- [x] **Expiration Engine:** Implemented `PriorityQueue` for $O(1)$ access to most urgent expiring medications.
-- [x] **Observer Pattern:** Built a decoupled notification system (`StockNotifier`) with Email and SMS stubs.
-- [x] **Automated Alerts:** Integrated low-stock triggers that broadcast messages to multiple observers.
-- [x] **CMS Reimbursement Logic:** Developed calculations for **Medicare Part B (ASP + 6%)** and **340B Drug Pricing**.
-- [x] **Unit Testing:** Achieved high test coverage for financial logic and data structures using **JUnit 5**.
+- **Build & Dependency Management:** Apache Maven
+- **Database & Persistence:** SQLite & JDBC
+- **Libraries:** OpenCSV, SLF4J, JUnit 5
+- **Data Visualization:** Tableau Public
+- **Data Source:** CMS.gov Medicare Part D Prescriber & ASP Pricing Data
+
+## 📅 Development Milestones
+
+### Week 1: Foundation & Data Ingestion (COMPLETED)
+- [x] **Core OOP Architecture:** Implemented `InventoryItem` parent class with `Medication` and `MedicalDevice` inheritance.
+- [x] **Maven Integration:** Configured project structure and dependencies using Maven.
+- [x] **Data Parsing:** Integrated **OpenCSV** to ingest large-scale CMS Medicare datasets.
+- [x] **Data Mapping:** Built `DataMapper` to sanitize raw CSV strings and map them into domain objects.
+- [x] **Inventory Manager:** Developed a `HashMap`-based lookup engine for $O(1)$ inventory access.
+- [x] **Console UI:** Built an interactive command-line interface for data ingestion and reporting.
+
+### Week 2: Intelligent Monitoring, Persistence & Financial Logic (COMPLETED)
+- [x] **Expiration Engine:** Implemented `PriorityQueue` for $O(1)$ access to the most urgent expiring medications.
+- [x] **Observer Pattern:** Built a decoupled notification system (`StockNotifier`) with Email and SMS alert observers.
+- [x] **Automated Alerts:** Integrated low-stock triggers that broadcast alerts across registered observers.
+- [x] **CMS Reimbursement Logic:** Implemented calculations for **Medicare Part B (ASP + 6%)** and **340B Drug Pricing**.
+- [x] **Database & HIPAA Audit Logging:** Added SQLite persistence via `InventoryDAO` and encrypted/sanitized access tracking via `SecurityLogger`.
+- [x] **Unit Testing:** Verified financial calculations and alert thresholds using **JUnit 5**.
 
 ## 📊 Data Visualization & Analytics
-The MediStock system exports clean CSV data for executive oversight. 
+MediStock exports processed inventory and financial risk metrics for executive oversight.
 
 ### Interactive Dashboard
-You can view the live interactive dashboard here:
-[👉 View MediStock Executive Dashboard on Tableau Public](https://public.tableau.com/authoring/MediStock_Executive_Dashboard/Dashboard1#1)
+[👉 View MediStock Executive Dashboard on Tableau Public](https://public.tableau.com/views/MediStock_Executive_Dashboard/Dashboard1)
 
 **Key Metrics Tracked:**
-* **Real-time Stock Levels:** Identified by Red-Green urgency mapping.
-* **Financial Risk:** Analysis of high-cost inventory batches.
-* **Reimbursement Potential:** Predicted Medicare/340B payouts based on current stock.
+- **Real-Time Stock Levels:** Categorized by Red-Green urgency thresholds.
+- **Financial Risk Exposure:** Identification of high-cost inventory nearing expiration.
+- **Reimbursement Potential:** Projected Medicare Part B and 340B payouts based on active stock.
+
+## 💻 Installation & How to Run
+
+### Prerequisites
+- **Java Development Kit (JDK):** Version 17 or higher
+- **Apache Maven:** Version 3.8+ (for terminal execution)
+- **Git**
+
+### Option 1: Run via Command Line / Terminal
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/Bricebazo/MediStock-Hospital-Inventory.git](https://github.com/Bricebazo/MediStock-Hospital-Inventory.git)
+   cd MediStock-Hospital-Inventory
