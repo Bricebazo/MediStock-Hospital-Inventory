@@ -21,6 +21,12 @@ public class HospitalWard {
 		return wardId;
 	}
 
+	@Override
+	public String toString() {
+		return "HospitalWard [wardId=" + wardId + ", name=" + name + ", department=" + department + ", capacity="
+				+ capacity + "]";
+	}
+
 	public void setWardId(String wardId) {
 		this.wardId = wardId;
 	}
