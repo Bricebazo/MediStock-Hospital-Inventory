@@ -41,8 +41,13 @@ public class mediStockApp {
 
             switch (choice) {
                 case 1:
-                    System.out.print("Enter full path to CSV file: ");
-                    String path = scanner.nextLine();
+                	System.out.print("Enter CSV path (press Enter for default 'cms_inventory.csv'): ");
+                    String path = scanner.nextLine().trim();
+                    if (path.isEmpty()) {
+                        path = "cms_inventory.csv";
+                    }
+                    
+                    // Pass the path to your importer/loader method
                     manager.loadInventoryFromCSV(path);
                     break;
                 case 2:
