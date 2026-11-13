@@ -26,6 +26,12 @@ public class MedicalDevice extends InventoryItem {
 		return deviceModel;
 	}
 
+	@Override
+	public String toString() {
+		return "MedicalDevice [deviceModel=" + deviceModel + ", lotNumber=" + lotNumber + ", isSterile=" + isSterile
+				+ ", lastCalibrationDate=" + lastCalibrationDate + "]";
+	}
+
 	public void setDeviceModel(String deviceModel) {
 		this.deviceModel = deviceModel;
 	}
