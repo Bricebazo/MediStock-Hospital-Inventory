@@ -86,6 +86,8 @@ public class Medication extends InventoryItem {
     public double calculate340BCost() {
         return (this.getUnitCost() * this.getQuantity()) * DRUG_340B_DISCOUNT_FACTOR;
     }
+
+
 	
 	
 	
